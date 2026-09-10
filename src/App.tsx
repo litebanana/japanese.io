@@ -1,6 +1,6 @@
 import { Suspense, lazy, useEffect, useRef, useState } from "react";
-import { KageLandingPage } from "@designcodeio/threeui";
 import "@designcodeio/threeui/style.css";
+import { KageHero } from "./components/KageHero";
 import { CartProvider, useCart } from "./store/cart";
 import { CartDrawer } from "./components/CartDrawer";
 
@@ -51,7 +51,7 @@ export function Scene() {
         ref={heroRef}
         className={`shader-frame${hibernating ? " hibernating" : ""}`}
       >
-        <KageLandingPage
+        <KageHero
           headingFont="onest"
           bodyFont="onest"
           headingWeight="400"

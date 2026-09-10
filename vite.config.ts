@@ -6,6 +6,8 @@ import { fileURLToPath } from "node:url";
 const root = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
+  // Project Pages serves under /japanese.io/, so built asset URLs need the prefix.
+  base: "/japanese.io/",
   plugins: [react()],
   resolve: {
     alias: [
