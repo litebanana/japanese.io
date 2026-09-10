@@ -1,0 +1,31 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #05070a;
+}
+
+.shader-frame {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+.shader-frame .threeui-background,
+.shader-frame .landing-page-frame {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.shader-frame iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* Hibernation: hero is off-screen (user is shopping), so stop all WebGL /
+   grain / vignette work. display:none pauses the iframe's rAF without
+   unloading it — the wrapper keeps its 100vh so layout never shifts. */
+.shader-frame.hibernating iframe {
+  display: none;
+}
